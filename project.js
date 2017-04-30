@@ -6,58 +6,58 @@ commentTop.html('<div class="comment-holder left"><div class="user-comment">'+te
 
 fillInstructions();*/
 
+
 function displayProject(projectData) {
 	
 	for (var j = 0; j < projectData.length; j++) {
 		var rowData = projectData[j];
-		console.log('ProjectData');
-		console.log(rowData);
+		//console.log('ProjectData');
+		//console.log(rowData);
 		console.log(rowData['pname']);
+		document.getElementById("title"+j).innerHTML = rowData['pname'];
+		document.getElementById("owner"+j).innerHTML = rowData['powner'];
+		document.getElementById("time"+j).innerHTML = rowData['post_time'];
+		document.getElementById("comments"+j).innerHTML = rowData['comments'];
+		document.getElementById("likes"+j).innerHTML = rowData['likes'];
+		
+		//document.getElementById("title")[0].html(rowData['pname']);
+		//document.getElementsById("title")[1].setAttribute("href", rowData['pname']);
+		/*$('#title').html(rowData['pname']);
+		$('#owner').html(rowData['powner']);
+		$('#time').html(rowData['post_time']);
+		$('#comments').html(rowData['comments']);
+		$('#likes').html(rowData['likes']);*/
+		
+		
+	/*//	var text_to_iterate = $('<div class="span8"></div>');
+		var pro_title_row = document.createElement("div");
+		pro_title_row.setAttribute  $('<div class="row"> </div>');
+		//var pro_img_row=$('<div class="row"> </div>');
+		var pro_owner_row=$('<div class="row"> </div>');
+		var pro_time_row=$('<div class="row"> </div>');
+		var pro_comments_row=$('<div class="row"> </div>');
+		var pro_likes_row=$('<div class="row"> </div>');
+		//var pro_tags_row=$('<div class="row"> </div>');
+		
+		var title = $('<div class="span8"><h4><strong><a href="#">'+rowData['pname']+'</a></strong></h4></div>');
+	   // var title = $('<div class="span2"><h4><strong><a href="#">'+rowData['pname']+'</a></strong></h4></div>');
+		var owner = $('<div class="span2"><h4><strong><a href="#">'+rowData['powner']+'</a></strong></h4></div>');
+		var post_time = $('<div class="span2"><h4><strong><a href="#">'+rowData['post_time']+'</a></strong></h4></div>');
+		var comments = $('<div class="span2"><h4><strong><a href="#">'+rowData['comments']+'</a></strong></h4></div>');
+		var likes = $('<div class="span2"><h4><strong><a href="#">'+rowData['likes']+'</a></strong></h4></div>');
+		//var tags = $('<div class="span2"><h4><strong><a href="#">'+rowData['tags']+'</a></strong></h4></div>');
+		pro_comments_row.append(comments);
+		pro_likes_row.append(likes);
+		pro_time_row.append(post_time);
+		pro_owner_row.append(owner);
+		pro_title_row.append(title);
+		$('.project').html('');
+		$('.project').append(pro_comments_row + pro_likes_row + pro_time_row + pro_owner_row + pro_title_row);*/
 	}
-}
-	/*
-	for (var i=)
-	var title = 
+     	
+}	
 	
-	var text_to_iterate = "<div class="span8">
-    <div class="row">
-      <div class="span8">
-        <h4><strong><a href="#">Title of the post</a></strong></h4>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span2">
-        <a href="#" class="thumbnail">
-            <img src="http://placehold.it/260x180" alt="No photo">
-        </a>
-      </div>
-      <div class="span6">      
-        <p>
-          Project desc	
-		  </p>
-        <p><a href="#">Read more</a></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span8">
-        <p></p>
-        <p>
-          <i class="icon-user"></i> by <a href="#">Mark</a> 
-          | <i class="icon-calendar"></i> Sept 16th, 2012
-          | <i class="icon-comment"></i> <a href="#">3 Comments</a>
-          | <i class="icon-share"></i> <a href="#">39 Likes</a>
-          | <i class="icon-tags"></i> Tags : <a href="#"><span class="label label-info">Snipp</span></a> 
-          <a href="#"><span class="label label-info">Bootstrap</span></a> 
-          <a href="#"><span class="label label-info">UI</span></a> 
-          <a href="#"><span class="label label-info">growth</span></a>
-        </p>
-      </div>
-    </div>
-  </div>"
-	
-	
-	
-	
+/*	
 var title = $('.pname');
 console.log(commentData);
 for (var i = 1; i < comments.length; i++) {
@@ -103,8 +103,10 @@ url: "project.php",
 //data: {'pname':pname, 'powner':powner, 'post_time':post_time, 'comments':comments, 'likes':likes},
 success: function(data) {
 displayProject(data);
-console.log('data');
-console.log(data);
+//console.log('data');
+//console.log(data);
 
 }
 });
+
+
